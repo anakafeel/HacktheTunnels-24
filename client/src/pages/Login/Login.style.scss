@@ -5,8 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
-  background-image: url("/carleton_background.jpg");
-  font-size: 1em; /* Increased font size */
+background-image: url("/carleton_background5.jpg");
+background-position: center 60%;
+  font-size: 1em; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +19,7 @@
 
 .Login__panel {
   width: 95%;
-  max-width: 43.25rem;
+  max-width: 34.25rem;
   height: auto;
   background-color: white;
   position: relative;

@@ -11,6 +11,7 @@
     "format": "prettier --write '**/*.{css,scss,html,ts,tsx}'"
   },
   "dependencies": {
+    "framer-motion": "^11.11.9",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
