@@ -49,26 +49,47 @@ function Login() {
           animate="show"
           variants={panelVariants}
         >
-          <motion.div className="Login__panel__content" variants={staggerChildren}>
-            <motion.img src="/carleton_logo_black.png" variants={staggerChildren}></motion.img>
-            <motion.div className="Login__panel__content__message" variants={staggerChildren}>
-              <div>Welcome to the Carleton SSO Federated Portal.</div>
-              <div>
+          <motion.div
+            className="Login__panel__content"
+            variants={staggerChildren}
+          >
+            <motion.img
+              src="/carleton_logo_black.png"
+              variants={staggerChildren}
+            ></motion.img>
+            <motion.div
+              className="Login__panel__content__message"
+              variants={staggerChildren}
+            >
+              <div className="text-black text">
+                Welcome to the Carleton SSO Federated Portal.
+              </div>
+              <div className="text-black text">
                 Enter your{" "}
                 <a href="https://myone.carleton.ca" target="blank">
                   MyCarletonOne
                 </a>{" "}
                 username and password.
               </div>
-            </motion.div>
-            {message && <motion.p variants={staggerChildren}>{message}</motion.p>}
-            <motion.div className="Login__panel__content__input" variants={staggerChildren}>
-              <input type="text" placeholder="MyCarletonOne username"></input>
-              <input type="password" placeholder="Password"></input>
-            </motion.div>
-            <motion.div className="Login__panel__content__checkbox" variants={staggerChildren}>
-              <input type="checkbox"></input>
-              <label>Keep me signed in</label>
+              {message && (
+                <motion.p className="text-black text" variants={staggerChildren}>
+                  {message}
+                </motion.p>
+              )}
+              <motion.div
+                className="Login__panel__content__input text-black text"
+                variants={staggerChildren}
+              >
+                <input type="text" placeholder="MyCarletonOne username"></input>
+                <input type="password" placeholder="Password"></input>
+              </motion.div>
+              <motion.div
+                className="Login__panel__content__checkbox text-black text"
+                variants={staggerChildren}
+              >
+                <input type="checkbox"></input>
+                <label>Keep me signed in</label>
+              </motion.div>
             </motion.div>
             <motion.button
               className="Login__panel__button"
