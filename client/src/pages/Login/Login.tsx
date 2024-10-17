@@ -1,13 +1,14 @@
-//npm run dev in client
 
 import { useState } from "react";
 import { useAccountContext } from "../../context";
 import { Base as Layout } from "@/layouts";
 import "./Login.style.scss";
 import { motion } from "framer-motion";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 function Login() {
   const [message, setMessage] = useState(null);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const { login } = useAccountContext();
 
   const attemptLogin = async () => {
@@ -17,6 +18,10 @@ function Login() {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible((prev) => !prev);
   };
 
   const panelVariants = {
@@ -52,7 +57,7 @@ function Login() {
           variants={panelVariants}
         >
           <motion.div className="Login__panel__content" variants={staggerChildren}>
-            <motion.img src="/carleton_logo_black.png" variants={staggerChildren}></motion.img>
+            <motion.img src="/carleton_logo_black.png" variants={staggerChildren} />
             <motion.div className="Login__panel__content__message" variants={staggerChildren}>
               <div>Welcome to the Carleton SSO Federated Portal.</div>
               <div>
@@ -65,11 +70,21 @@ function Login() {
             </motion.div>
             {message && <motion.p variants={staggerChildren}>{message}</motion.p>}
             <motion.div className="Login__panel__content__input" variants={staggerChildren}>
-              <input type="text" placeholder="MyCarletonOne username"></input>
-              <input type="password" placeholder="Password"></input>
+              <div className="username-container"> {/* Renamed class */}
+                <input type="text" placeholder="MyCarletonOne username" />
+              </div>
+              <div className="password-container">
+                <input
+                  type={isPasswordVisible ? 'text' : 'password'}
+                  placeholder="Password"
+                />
+                <div className="icon" onClick={togglePasswordVisibility}>
+                  {isPasswordVisible ? <FaEyeSlash /> : <FaEye />}
+                </div>
+              </div>
             </motion.div>
             <motion.div className="Login__panel__content__checkbox" variants={staggerChildren}>
-              <input type="checkbox"></input>
+              <input type="checkbox" />
               <label>Keep me signed in</label>
             </motion.div>
             <motion.button
