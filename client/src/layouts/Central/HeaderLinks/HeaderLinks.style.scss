@@ -22,3 +22,23 @@
     color: $theme--dark;
   }
 }
+.HeaderLinks {
+  a {
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  // Dark mode specific styling
+  [data-theme="dark"] & {
+    a {
+      color: var(--dark-text-color);
+
+      &:hover {
+        color: var(--dark-hover-color);
+      }
+    }
+  }
+}

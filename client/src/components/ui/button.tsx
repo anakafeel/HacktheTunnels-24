@@ -10,16 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow hover:bg-primary/90 dark:bg-gray-700 dark:text-white", // Added dark mode styles
+          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 dark:bg-red-600 dark:text-white", // Added dark mode styles
+          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground dark:bg-gray-800 dark:text-gray-300", // Added dark mode styles
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 dark:bg-gray-700 dark:text-white", // Added dark mode styles
-        ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-gray-800 dark:hover:text-white", // Added dark mode styles
-        link: "text-primary underline-offset-4 hover:underline dark:text-gray-200", // Added dark mode styles
+          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -34,7 +33,6 @@ const buttonVariants = cva(
     },
   }
 )
-
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
