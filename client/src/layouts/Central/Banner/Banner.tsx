@@ -7,17 +7,19 @@ type BannerProps = {
 };
 
 function Banner({ children }: BannerProps) { 
-  return (
-    <div className="Banner">
-      <img src="/carleton_logo.png" alt="logo" />
-      <div className="Banner__seperator"></div>
+return (
+    <div className="Banner flex items-center justify-between">
+    <div className="flex items-center">
+      <img src="/carleton_logo.png" alt="logo" className="mr-4" />
+      <div className="Banner__seperator" style={{ width: '2px', height: '30px', margin: '0 10px' }}></div>
       <div className="Banner__title">Carleton Central</div>
-
-      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <ModeToggle />
-        {children}
-      </ThemeProvider>
     </div>
+
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <ModeToggle/>
+      {children}
+    </ThemeProvider>
+  </div>
   );
 }
 
