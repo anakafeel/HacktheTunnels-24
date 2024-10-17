@@ -1,3 +1,5 @@
+//npm run dev in client
+
 import { useState } from "react";
 import { useAccountContext } from "../../context";
 import { Base as Layout } from "@/layouts";
@@ -58,7 +60,7 @@ function Login() {
                 <a href="https://myone.carleton.ca" target="blank">
                   MyCarletonOne
                 </a>{" "}
-                username and password.jjfjj
+                username and password.
               </div>
             </motion.div>
             {message && <motion.p variants={staggerChildren}>{message}</motion.p>}
