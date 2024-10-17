@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle"; 
 
 type BannerProps = {
-  children: React.ReactNode; 
+  children?: React.ReactNode; 
 };
 
 function Banner({ children }: BannerProps) { 
