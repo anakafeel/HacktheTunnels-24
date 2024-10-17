@@ -41,8 +41,8 @@
   border: none;
   background-color: rgb(38, 114, 236);
   color: rgb(255, 255, 255);
-  /*   padding: 0.5rem 1.25rem 0.5rem 1.25rem; */
-  padding: 0.5rem 12.1rem;
+    padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+/*   padding: 0.5rem 12.1rem; */
   cursor: pointer;
   font-size: 1rem;
   text-align: center;
@@ -72,7 +72,7 @@
 
 .Login__panel__content__message {
   margin-bottom: 1.875rem;
-  font-size: 1em; /* Increased font size */
+  font-size: 1em; 
 }
 
 .Login__panel__content__message a {
@@ -93,11 +93,11 @@
   height: 28px;
   padding: 0px 3px 0px 3px;
   border: solid 1px #bababa;
-  font-size: 1rem; /* Increased font size */
+  font-size: 1rem; 
 }
 
 .Login__panel__content__checkbox {
-  font-size: 1rem; /* Increased font size */
+  font-size: 1rem; 
   margin-top: 0.625rem;
   margin-bottom: 2.375rem;
 }
@@ -105,8 +105,4 @@
 .Login__panel__content__checkbox input {
   margin: auto 0;
   margin-right: 0.25rem;
-}
-
-.text{
-  margin-bottom: 10px;
 }
