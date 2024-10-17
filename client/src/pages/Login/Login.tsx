@@ -58,7 +58,7 @@ function Login() {
                 <a href="https://myone.carleton.ca" target="blank">
                   MyCarletonOne
                 </a>{" "}
-                username and password.
+                username and password.jjfjj
               </div>
             </motion.div>
             {message && <motion.p variants={staggerChildren}>{message}</motion.p>}
