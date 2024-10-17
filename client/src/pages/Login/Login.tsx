@@ -77,7 +77,7 @@ function Login() {
               onClick={() => attemptLogin()}
               variants={staggerChildren}
             >
-              Sign In
+              Sign in
             </motion.button>
           </motion.div>
         </motion.div>
