@@ -1,3 +1,53 @@
+// @import "../../globals.scss";
+
+// .Timetable {
+//   font-size: 0.8rem;
+//   margin-top: 1.25rem;
+//   margin-bottom: 1.25rem;
+
+//   table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     border-spacing: 0;
+//     border-color: black;
+
+//     tr {
+//       border: solid 2px #e0e0e0;
+//     }
+
+//     td {
+//       border: solid 2px #e0e0e0;
+//       padding: 10px;
+//       text-align: center;
+//       height: 10px;
+//     }
+
+//     th {
+//       width: 5rem !important;
+//       max-width: 5rem !important;
+//     }
+//   }
+
+//   &__head {
+//     background-color: #cccccc;
+//   }
+
+//   &__cell--event {
+//     background-color: #cccccc;
+//   }
+
+//   &__cell--time {
+//     border-bottom: solid 2px #ffffff !important;
+//   }
+
+//   &__cell--multiple-events {
+//     background-color: rgba($theme--dark, 0.31);
+//     color: $theme--dark;
+//     font-weight: bold;
+//   }
+// }
+
+
 @import "../../globals.scss";
 
 .Timetable {
@@ -19,7 +69,8 @@
       border: solid 2px #e0e0e0;
       padding: 10px;
       text-align: center;
-      height: 10px;
+      height: 50px; // Adjust height for better visibility
+      transition: background-color 0.3s ease; // Smooth transition for background color
     }
 
     th {
@@ -33,7 +84,8 @@
   }
 
   &__cell--event {
-    background-color: #cccccc;
+    // Removed fixed background color
+    position: relative; // For positioning child elements if needed
   }
 
   &__cell--time {
@@ -44,5 +96,16 @@
     background-color: rgba($theme--dark, 0.31);
     color: $theme--dark;
     font-weight: bold;
+  }
+
+  .Timetable__event {
+    padding: 5px; // Add some padding for event labels
+    border-radius: 4px; // Rounded corners for event boxes
+    margin: 2px 0; // Spacing between events
+  }
+
+  .event-label {
+    font-weight: bold; // Ensure event labels are bold
+    color: #fff; // Contrast color for better visibility
   }
 }

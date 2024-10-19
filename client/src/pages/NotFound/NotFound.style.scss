@@ -1,0 +1,67 @@
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .not-found-title {
+    font-size: 6rem;
+    color: #ff6347; // Tomato color
+    margin: 0;
+    animation: fadeIn 1s ease-in; // No delay
+  }
+  
+  .not-found-message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #555;
+    animation: fadeIn 1s ease-in; // No delay
+  }
+  
+  .not-found-suggestions {
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in; // No delay
+  
+    p {
+      margin-bottom: 10px;
+    }
+  
+    .not-found-home-button {
+      //background-color: #547fb7;
+      background-color: #0057b389;
+
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+  
+      &:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+  
+      &:focus {
+        outline: none; // Removes default focus outline
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); // Custom focus style
+      }
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

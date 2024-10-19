@@ -20,11 +20,11 @@ function ViewTimetable() {
         const result = await ServiceAPI.fetchTimetable(id, jwt);
         setTimetable(result);
       } catch (error) {
-        setError(error.message);
+        setError((error as Error).message); // Ensure type safety for error message
       }
     };
     fetchTimetable();
-  }, []);
+  }, [id, jwt]); // Add dependencies to useEffect to ensure they are up-to-date
 
   if (!timetable) {
     return (
