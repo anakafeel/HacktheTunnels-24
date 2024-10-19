@@ -23,15 +23,26 @@ function BuildTimetable() {
     setScheduledEvents(result);
   };
 
-  const createTimetable = async () => {
-    const result = await ServiceAPI.createTimetable(
-      new Date().toISOString(),
-      selectedEvents.map((event) => event.id.toString()),
-      jwt,
-    );
+const createTimetable = async () => {
+  const eventIds = selectedEvents.map((event) => event.id).filter(id => id !== null && id !== undefined);
+  
+  if (eventIds.length === 0) {
+    console.error("No valid event IDs found.");
+    return;
+  }
 
+  const result = await ServiceAPI.createTimetable(
+    new Date().toISOString(),
+    eventIds.map(id => id.toString()),
+    jwt,
+  );
+
+  if (result && result.data && result.data.id) {
     navigate(`/timetables/${result.data.id}`);
-  };
+  } else {
+alert("Failed to create timetable, Overlapping Timings");
+  }
+};
 
   const addEvent = (event: ScheduledEvent) => {
     setSelectedEvents([...selectedEvents, event]);
