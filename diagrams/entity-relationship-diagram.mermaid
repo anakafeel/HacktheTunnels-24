@@ -1,0 +1,56 @@
+erDiagram
+    Course {
+        int id PK
+        string subjectCode
+        string courseCode
+        string title
+        string shortTitle
+        string description
+        datetime createdAt
+        datetime updatedAt
+    }
+    ScheduledEvent {
+        int id PK
+        string crn
+        string section
+        string instructor
+        string credit
+        string type
+        string term
+        string days
+        string startTime
+        string endTime
+        string additionalRegistrationRequirements
+        string url
+        string description
+        int courseId FK
+        datetime createdAt
+        datetime updatedAt
+    }
+    TimetableEvent {
+        int id PK
+        int scheduledEventId FK
+        int timetableId FK
+        datetime createdAt
+        datetime updatedAt
+    }
+    Timetable {
+        int id PK
+        string name
+        int accountId FK
+        datetime createdAt
+        datetime updatedAt
+    }
+    Account {
+        int id PK
+        string email
+        string password
+        string role
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    Course ||--o{ ScheduledEvent : "has"
+    ScheduledEvent ||--o{ TimetableEvent : "has"
+    Timetable ||--o{ TimetableEvent : "includes"
+    Account ||--o{ Timetable : "owns"
