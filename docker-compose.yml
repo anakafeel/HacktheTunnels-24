@@ -1,0 +1,23 @@
+version: '3'
+services:
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - service
+    networks:
+      - app-network
+
+  service:
+    build:
+      context: ./service
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
