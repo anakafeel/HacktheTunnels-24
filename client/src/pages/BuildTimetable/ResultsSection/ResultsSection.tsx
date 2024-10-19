@@ -10,8 +10,8 @@ interface ResultsSectionProps {
 
 function ResultsSection({ scheduledEvents, addEvent }: ResultsSectionProps) {
   return (
-    <div className="ResultsSection">
-      <div className="ResultsSection__topbar">
+    <div className="ResultsSection no-dark-mode">
+      <div className="ResultsSection__topbar no-dark-mode">
         <div className="ResultsSection__topbar__item ResultsSection__add"></div>
         <div className="ResultsSection__topbar__item ResultsSection__crn">CRN</div>
         <div className="ResultsSection__topbar__item ResultsSection__subject">Subject</div>
@@ -35,27 +35,27 @@ function ResultsSection({ scheduledEvents, addEvent }: ResultsSectionProps) {
                   Add
                 </button>
               </div>
-              <div className="ResultsSection__crn">
-                <a href={event.url} target="_blank" rel="noopener noreferrer">
+              <div className="ResultsSection__crn no-dark-mode">
+                <a  className="no-dark-mode" href={event.url} target="_blank" rel="noopener noreferrer">
                   {event.crn}
                 </a>
               </div>
-              <div className="ResultsSection__subject">
-                <a href={event.url} target="_blank" rel="noopener noreferrer">
+              <div className="ResultsSection__subject no-dark-mode">
+                <a className="no-dark-mode" href={event.url} target="_blank" rel="noopener noreferrer">
                   {event.course.subjectCode} {event.course.courseCode}
                 </a>
               </div>
-              <div className="ResultsSection__section">{event.section}</div>
-              <div className="ResultsSection__title">
-                <a href={event.url} target="_blank" rel="noopener noreferrer">
+              <div className="ResultsSection__section no-dark-mode">{event.section}</div>
+              <div className="ResultsSection__title no-dark-mode">
+                <a className="no-dark-mode" href={event.url} target="_blank" rel="noopener noreferrer">
                   {event.course.shortTitle}
                 </a>
               </div>
-              <div className="ResultsSection__credit">{event.credit}</div>
-              <div className="ResultsSection__type">{event.type}</div>
-              <div className="ResultsSection__instructor">{event.instructor}</div>
+              <div className="ResultsSection__credit no-dark-mode">{event.credit}</div>
+              <div className="ResultsSection__type no-dark-mode">{event.type}</div>
+              <div className="ResultsSection__instructor no-dark-mode">{event.instructor}</div>
             </div>
-            <div className="ResultsSection__result__content">
+            <div className="ResultsSection__result__content no-dark-mode">
               <div>
                 <strong>Days:</strong> {event.days}, <strong>Time:</strong> {event.startTime} - {event.endTime}
               </div>
