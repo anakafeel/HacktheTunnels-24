@@ -1,0 +1,32 @@
+name: Prettier Code Formatter
+
+# Trigger the action on pull requests
+on: 
+  pull_request:
+    paths:
+      - '**/*.js' # Modify this to match the file types you'd like to run Prettier on
+      - '**/*.ts' # Add or remove file types as necessary
+      - '**/*.css'
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Or whatever Node.js version your project is using
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Prettier
+        run: npx prettier --check .
+        
+      - name: Run Prettier (auto-fix)
+        run: npx prettier --write .
+        if: failure() # This will auto-fix if Prettier fails
