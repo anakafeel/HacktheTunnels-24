@@ -2,32 +2,24 @@
 
 .HeaderLinks {
   margin: 0.5rem;
-  text-align: right;
   display: flex;
-  gap: 0.25rem;
+  align-items: flex-start; /* Align items to the start (left) */
+  justify-content: flex-start; /* Align items to the left */
+  padding: 1rem; /* Optional: add some padding for spacing */
+  gap: 0.25rem; /* Space between links */
   font-size: 0.8rem;
-  justify-content: right;
+
   a {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-  }
-
-  a:hover {
-    text-decoration: none;
-    color: $theme--dark;
-  }
-
-  a:active {
-    color: $theme--dark;
-  }
-}
-.HeaderLinks {
-  a {
-    color: var(--text-color);
 
     &:hover {
-      color: var(--hover-color);
+      color: $theme--dark;
+    }
+
+    &:active {
+      color: $theme--dark;
     }
   }
 
@@ -40,5 +32,17 @@
         color: var(--dark-hover-color);
       }
     }
+  }
+
+  // Responsive styling
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+    padding: 0.5rem;
   }
 }

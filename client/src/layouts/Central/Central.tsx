@@ -15,7 +15,7 @@ function Central({ title, children }: Props) {
     <Base>
       <Banner />
       <div className="Central__page">
-        <HeaderLinks />
+{        <HeaderLinks />}
         <Navigation />
         <h2 className="Central__page__title">{title}</h2>
         <Divider />
