@@ -1,7 +1,25 @@
-.BuildTimetable {
-  margin: 2rem auto;
-  width: 95%;
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dialog-footer {
   display: flex;
-  gap: 1rem;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }

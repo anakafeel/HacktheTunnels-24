@@ -1,80 +1,110 @@
 .ResultsSection {
+  font-family: 'Arial', sans-serif;
+  border-radius: 8px; // Rounded edges for the whole section
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  overflow: hidden; // To ensure rounded edges are visible
+
   &__topbar {
     display: flex;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    justify-content: space-between; // Ensures items are spaced evenly
+    background-color: #f4f4f4; // Light background for the topbar
+    padding: 0.8rem; // Slightly reduced padding
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: bold;
 
     &__item {
-      font-weight: bold;
-      width: fit-content;
+      margin: 0 1rem; // Space between items
+      flex: 1; // Allow items to grow and fill available space
+      text-align: center; // Center align text for better appearance
     }
   }
 
   &__result {
+    transition: transform 0.2s ease, background-color 0.2s ease; // Smooth transition on hover
+    padding: 0.8rem; // Reduced padding for results
+    margin: 0.5rem 0; // Space between results
+    border-radius: 8px; // Rounded edges for each result
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 0.5rem;
-    padding-bottom: 1.5rem;
+    background-color: #ffffff; // White background for results
+
+    &--gray {
+      background: #f0f0f0; // Slightly lighter gray
+    }
+
+    &--light-gray {
+      background: #e0e0e0; // Even lighter gray
+    }
+
+    &:hover {
+      transform: scale(1.02); // Slightly scale up on hover
+      background-color: #e6f7ff; // Change background color on hover
+    }
 
     &__topbar {
       display: flex;
       align-items: center;
+      justify-content: space-between; // Space between items
       margin-bottom: 0.5rem;
     }
 
-    &--gray {
-      background: #dcdcdc;
-    }
-
-    &--light-gray {
-      background: #c0c0c0;
-    }
-
     &__content {
-      padding-left: 4rem;
+      padding-left: 0.5rem; // Reduced left padding for the content
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.5rem; // Space between content items
     }
   }
 
   &__results {
-    max-height: 25rem;
+    max-height: 20rem;
     overflow-y: auto;
   }
 
-  &__crn {
-    width: 5rem;
-  }
-
   &__add {
-    width: 4rem;
+    button {
+      background-color: #007bff; // Primary blue color
+      color: white; // White text
+      border: none; // No border
+      border-radius: 4px; // Slightly rounded corners
+      padding: 0.5rem 1rem; // Padding for the button
+      cursor: pointer; // Pointer cursor on hover
+      transition: background-color 0.3s, transform 0.2s; // Smooth transitions
+
+      &:hover {
+        background-color: #0056b3; // Darker blue on hover
+        transform: scale(1.05); // Slight scale effect on hover
+      }
+
+      &:focus {
+        outline: none; // Remove default outline on focus
+      }
+    }
   }
 
-  &__subject {
-    width: 7rem;
-  }
+  // New styles for dark mode
+  &.dark {
+    color: black; // Set font color to black in dark mode
 
-  &__section {
-    width: 6rem;
-  }
+    &__topbar {
+      background-color: #404040; // Optional: dark background for the topbar in dark mode
+      border-bottom: 2px solid #606060; // Optional: darker border color
+    }
 
-  &__title {
-    width: 12rem;
-  }
+    &__result {
+      background-color: #505050; // Optional: dark background for results
+      
+      &--gray {
+        background: #606060; // Darker gray for light-gray result
+      }
 
-  &__credit {
-    width: 5rem;
-  }
+      &--light-gray {
+        background: #707070; // Darker light-gray for light-gray result
+      }
 
-  &__type {
-    width: 8rem;
-  }
-
-  &__instructor {
-    width: 9rem;
+      // Set font color to black for all text in the result cards
+      color: black; // Ensure the text color is black in dark mode
+    }
   }
 }
