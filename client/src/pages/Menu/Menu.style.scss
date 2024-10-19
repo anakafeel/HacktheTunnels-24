@@ -1,3 +1,27 @@
+/* For links in dark mode */
+.dark a {
+  color: white;
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+/* Preventing specific links from changing color */
+.dark .no-dark-mode {
+  color: black !important; /* Use !important to ensure it overrides */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Optional: add hover state in dark mode */
+.dark a:hover {
+  color: #DA0037; /* Slightly lighter white on hover */
+  transition: color 0.3s ease-in-out;
+}
+
+/* For light mode link color if needed */
+a {
+  color: #333; /* Original color of links in light mode */
+  transition: color 0.3s ease-in-out;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +35,14 @@
   overflow: hidden;
   margin-bottom: 20px;
   backface-visibility: hidden;
+
+  background-color: #ffffff; 
+  transition: background-color 0.3s ease;
+
+  .dark & {
+    background-color: #808080;
+  }
 }
+
 
   

@@ -52,8 +52,8 @@ function Menu() {
               <Link to="/404" key="emergency-contact">
                 Personal Emergency Contact Information
               </Link>,
-              <span key="campus-card">
-                <b>Campus Card:</b> The CampusCard online services can now be
+              <span className="no-dark-mode" key="campus-card">
+                <b >Campus Card:</b> The CampusCard online services can now be
                 accessed through the{" "}
                 <a href="https://wcc.carleton.ca/student/welcome.php">
                   CampusCard Web Center
@@ -92,7 +92,7 @@ function Menu() {
           <CabinetSection
             title="Student Records"
             lineItems={[
-              <span key="grad-admissions">
+              <span className="no-dark-mode" key="grad-admissions">
                 <b>Graduate Admissions:</b> Graduate Admissions and Graduate
                 In-Program Revisions.
               </span>,
@@ -128,7 +128,7 @@ function Menu() {
             title="Registration"
             lineItems={[
               <span key="registration">
-                <b>Registration: </b>
+                <b className="no-dark-mode">Registration: </b>
                 <Link to="/404">Getting Started</Link>,{" "}
                 <Link to="/timetables/build">Build Your Timetable/Registration</Link>,
                 <Link to="/timetables">Student Timetables</Link>,
@@ -164,7 +164,7 @@ function Menu() {
           <CabinetSection
             title="Academic Progress"
             lineItems={[
-              <span key="my-audit">
+              <span className="no-dark-mode" key="my-audit">
                 <b>myAudit:</b> View academic audit.
               </span>,
               <Link to="/404" key="my-progress">
