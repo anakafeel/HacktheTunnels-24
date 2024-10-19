@@ -1,25 +1,25 @@
 /* For links in dark mode */
 .dark a {
   color: white;
-  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+  transition: color 0.3s ease-in-out; 
 }
 
 /* Preventing specific links from changing color */
 .dark .no-dark-mode {
-  color: black !important; /* Use !important to ensure it overrides */
+  color: black !important;
   transition: color 0.3s ease-in-out;
 }
 
 
 /* Optional: add hover state in dark mode */
 .dark a:hover {
-  color: #DA0037; /* Slightly lighter white on hover */
+  color: #DA0037;
   transition: color 0.3s ease-in-out;
 }
 
 /* For light mode link color if needed */
 a {
-  color: #333; /* Original color of links in light mode */
+  color: #333;
   transition: color 0.3s ease-in-out;
 }
 
