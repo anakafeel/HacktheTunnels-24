@@ -137,3 +137,9 @@
     }
   }
 }
+
+.ResultsSection__result--highlight {
+  background-color: #ffe58a; // Light yellow background to highlight today's events
+  border-left: 5px solid #ffec3d; // Bold yellow border
+  transition: background-color 0.3s ease;
+}
