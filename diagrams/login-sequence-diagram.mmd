@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Client
+    participant LoginPage
+    participant LoginDictionary
+    participant MenuPage
+
+    Client->>LoginPage: Send login credentials
+    LoginPage->>LoginDictionary: Verify credentials
+    LoginDictionary-->>LoginPage: Return verification result
+    alt Credentials valid
+        LoginPage-->>Client: Send success response
+        Client->>MenuPage: Able to view data
+       
+    else Credentials invalid
+        LoginPage-->>Client: Send error response
+    end
