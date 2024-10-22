@@ -6,7 +6,7 @@ import { TimetableSection } from "./TimetableSection";
 import { useState } from "react";
 import { ServiceAPI } from "@/infrastructure";
 import { ScheduledEvent } from "@/infrastructure/ServiceAPI";
-import { WorksheetSection } from "./WorksheetSection";
+/* import { WorksheetSection } from "./WorksheetSection"; */
 import { useAccountContext } from "@/context";
 import { useNavigate } from "react-router-dom";
 import { scheduledEventToCalendarBlock } from "@/utils";
@@ -24,7 +24,7 @@ function BuildTimetable() {
   const { jwt } = useAccountContext();
   const [scheduledEvents, setScheduledEvents] = useState<ScheduledEvent[]>([]);
   const [selectedEvents, setSelectedEvents] = useState<ScheduledEvent[]>([]);
-  const [timetableName, setTimetableName] = useState(""); // New state for timetable name
+  const [timetableName, setTimetableName] = useState(""); 
   const navigate = useNavigate();
 
   const fetchScheduledEvents = async () => {
@@ -70,9 +70,6 @@ function BuildTimetable() {
     setSelectedEvents([...selectedEvents, event]);
   };
 
-  const removeEvent = (event: ScheduledEvent) => {
-    setSelectedEvents(selectedEvents.filter((e) => e.id !== event.id));
-  };
 
   return (
     <Layout title={"My Course Worksheet"}>

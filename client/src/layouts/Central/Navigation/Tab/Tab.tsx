@@ -5,7 +5,7 @@ interface TabProps {
   highlighted: boolean;
 }
 
-function Tab({ label, highlighted }: TabProps) {
+function Tab({ label}: TabProps) {
   return (
     <div className="Tab">
       <div className="Tab__left"></div>
