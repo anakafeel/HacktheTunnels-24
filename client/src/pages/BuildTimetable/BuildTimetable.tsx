@@ -70,7 +70,6 @@ function BuildTimetable() {
     setSelectedEvents([...selectedEvents, event]);
   };
 
-
   return (
     <Layout title={"My Course Worksheet"}>
       <div className="BuildTimetable">
