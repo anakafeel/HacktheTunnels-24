@@ -1,7 +1,10 @@
 // src/infrastructure/ServiceAPI/Accounts.ts
+
+const API_URL = import.meta.env.VITE_API_ROOT;
+
 export const login = async (email: string, password: string) => {
   try {
-    const response = await fetch('http://localhost:5000/api/v1/login', {
+    const response = await fetch(`${API_URL}/api/v1/login`, {
       method: "POST",
       credentials: 'include',
       headers: {
@@ -9,8 +12,8 @@ export const login = async (email: string, password: string) => {
         "Accept": "application/json",
       },
       body: JSON.stringify({
-        email: email,
-        password: password,
+        email,
+        password,
       }),
     });
 
